@@ -1,23 +1,23 @@
 export class Negociation {
-    #data; 
-    #amount;
-    #value;
+    private _data; 
+    private _amount;
+    private _value;
     
     constructor(data, amount, value){
-        this.#data = data;
-        this.#amount = amount;
-        this.#value = value;
+        this._data = data;
+        this._amount = amount;
+        this._value = value;
     }
 
     get data(){
-        return this.#data
+        return this._data
     }
 
     get amount(){
-        return this.#amount * this.#value
+        return this._amount * this._value
     }
 
     get value(){
-        return this.#value
+        return this._value
     }
 }
