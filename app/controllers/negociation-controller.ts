@@ -1,7 +1,9 @@
+import { Negociation } from "../models/negociation.js";
+
 export class NegociationController {
-    private inputData;
-    private inputAmount;
-    private inputValue;
+    private inputData: HTMLInputElement;
+    private inputAmount: HTMLInputElement;
+    private inputValue: HTMLInputElement;
 
 
     constructor() {
@@ -11,7 +13,11 @@ export class NegociationController {
     }
 
     add(){
-        console.log(this.inputData, this.inputAmount, this.inputValue);
-        
+      const negociaton = new Negociation(
+        this.inputData.value,
+        this.inputAmount.value,
+        this.inputValue.value
+      );
+        console.log(negociaton)
     }
 }
