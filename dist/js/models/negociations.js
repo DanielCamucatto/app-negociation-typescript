@@ -7,6 +7,6 @@ export class Negociations {
         this.negociations.push(negociation); //ADICIONA UMA NEGOCIAÇÃO A LISTA DE NEGOCIAÇOES
     }
     renderList() {
-        return this.negociations; // RENDERIZA UM ARRAY DE NEGOCIAÇÕES 
+        return this.negociations; // RENDERIZA UM ARRAY DE NEGOCIAÇÕES  
     }
 }

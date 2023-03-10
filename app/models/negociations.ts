@@ -8,7 +8,7 @@ export class Negociations {
     this.negociations.push(negociation); //ADICIONA UMA NEGOCIAÇÃO A LISTA DE NEGOCIAÇOES
     }
 
-    renderList():Array<Negociation> {
-         return this.negociations; // RENDERIZA UM ARRAY DE NEGOCIAÇÕES 
+    renderList():ReadonlyArray<Negociation> { // READONLYARRAY GERA UMA LISTA SOMENTE COM LEITURA, SEM A POSSIBILIDADE DE MODIFICAÇÃO
+         return this.negociations; // RENDERIZA UM ARRAY DE NEGOCIAÇÕES  
    }
 }
