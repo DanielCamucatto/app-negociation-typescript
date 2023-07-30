@@ -5,8 +5,7 @@ export function domInjector(selector: string){
             if(!elemento){
                 elemento =<HTMLElement> document.querySelector(selector)
             }
-            // const elemento = document.querySelector(selector);
-            // return elemento
+            return elemento
         }
 
         Object.defineProperty(
