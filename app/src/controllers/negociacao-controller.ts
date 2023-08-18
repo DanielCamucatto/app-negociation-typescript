@@ -1,6 +1,5 @@
 import { domInjector } from '../decorators/dom-injector.js';
 import { inspect } from '../decorators/inspect.js';
-import { logarTempoDeExecucao } from '../decorators/logar-tempo-de-execucao.js';
 import { DiasDaSemana } from '../enums/dias-da-semana.js';
 import { Negociacao } from '../models/negociacao.js';
 import { Negociacoes } from '../models/negociacoes.js';
@@ -15,7 +14,7 @@ export class NegociacaoController {
     @domInjector('#quantidade')
     private inputQuantidade: HTMLInputElement;
 
-    @domInjector('valor')
+    @domInjector('#valor')
     private inputValor: HTMLInputElement;
     
     private negociacoes = new Negociacoes();
@@ -45,6 +44,8 @@ export class NegociacaoController {
         }
 
         this.negociacoes.adiciona(negociacao);
+        console.log(negociacao.paraTexto());
+        console.log(this.negociacoes.paraTexto());
         this.limparFormulario();
         this.atualizaView();
     }

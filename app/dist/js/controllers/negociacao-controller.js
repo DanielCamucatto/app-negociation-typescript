@@ -28,6 +28,8 @@ export class NegociacaoController {
             return;
         }
         this.negociacoes.adiciona(negociacao);
+        console.log(negociacao.paraTexto());
+        console.log(this.negociacoes.paraTexto());
         this.limparFormulario();
         this.atualizaView();
     }
@@ -63,7 +65,7 @@ __decorate([
     domInjector('#quantidade')
 ], NegociacaoController.prototype, "inputQuantidade", void 0);
 __decorate([
-    domInjector('valor')
+    domInjector('#valor')
 ], NegociacaoController.prototype, "inputValor", void 0);
 __decorate([
     inspect
